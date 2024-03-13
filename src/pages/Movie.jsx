@@ -1,9 +1,17 @@
-import { useParams, useHistory } from "react-router-dom";
+import {
+  useParams,
+  useHistory,
+  useRouteMatch,
+  useLocation,
+} from "react-router-dom";
 
 function Movie() {
   const { title } = useParams();
   const { goBack } = useHistory();
-  //   console.log(value);
+  const value = useRouteMatch();
+  const value2 = useLocation();
+  console.log(value);
+  console.log(value2);
 
   return (
     <>
