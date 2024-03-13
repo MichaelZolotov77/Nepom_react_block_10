@@ -8,6 +8,7 @@ import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
 import { NotFound } from "./pages/NotFound";
 import { Movie } from "./pages/Movie";
+import { NestingExample } from "./pages/NestingExample";
 
 function App() {
   return (
@@ -16,10 +17,13 @@ function App() {
         <Header />
         <main className="container content">
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/">
+              <Home />
+            </Route>
             <Route path="/about" component={About} />
             <Route path="/contacts" component={Contact} />
             <Route path="/movies/:title" component={Movie} />
+            <Route path="/nesting_example" component={NestingExample} />
             <Route component={NotFound} />
           </Switch>
         </main>
