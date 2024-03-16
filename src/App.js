@@ -7,7 +7,8 @@ import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
 import { NotFound } from "./pages/NotFound";
-import { Movie } from "./pages/Movie";
+
+import { Category } from "./pages/Category";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
             </Route>
             <Route path="/about" component={About} />
             <Route path="/contacts" component={Contact} />
-            <Route path="/movies/:title" component={Movie} />
+            <Route path="/category/:name" component={Category} />
             <Route component={NotFound} />
           </Switch>
         </main>
